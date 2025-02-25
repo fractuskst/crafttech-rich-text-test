@@ -1,0 +1,39 @@
+@use '../../styles/variables' as *;
+
+.container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: $background-color;
+  border-radius: 4px;
+  width: 600px;
+}
+
+.editor {
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.saveButton {
+  padding: 5px 10px;
+  background: $primary-color;
+  color: $text-color;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background: $primary-dark-color;
+  }
+}
+
+.cancelButton {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background: $danger-color;
+  color: $text-color;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background: $danger-dark-color;
+  }
+}

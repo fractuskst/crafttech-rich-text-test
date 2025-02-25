@@ -1,0 +1,39 @@
+@use '../../styles/variables' as *;
+
+.container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding: 10px;
+  background-color: $primary-dark-color;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.radioLabel {
+  width: 50%;
+  text-align: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $primary-color;
+  }
+}
+
+input[type='radio'] {
+  display: none;
+
+  &:checked + .radioLabel {
+    border-color: $border-primary-color;
+    background-color: $primary-color;
+  }
+}

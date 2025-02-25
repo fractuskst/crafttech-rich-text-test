@@ -1,17 +1,18 @@
-import { useRef, useState } from "react";
-import "./App.css";
-import Canvas from "./components/canvas/Canvas";
-import Control from "./components/control/Control";
+import { useRef, useState } from 'react';
 
-function App() {
-  const [tool, setTool] = useState("cursor");
-  const stageRef = useRef(null);
+import Canvas from './components/Canvas/Canvas';
+import Control from './components/Control/Control';
+import Konva from 'konva';
+
+const App = () => {
+  const [tool, setTool] = useState('cursor');
+  const stageRef = useRef<Konva.Stage>(null);
   return (
-    <>
+    <div>
       <Canvas tool={tool} stageRef={stageRef} />
       <Control tool={tool} setTool={setTool} />
-    </>
+    </div>
   );
-}
+};
 
 export default App;
